@@ -19,6 +19,7 @@ def getJwt(service_account_email, token):
     now = int(datetime.now().timestamp())
     payload = {
             "iss":service_account_email,
+            "sub":service_account_email,
             "scope":"https://www.googleapis.com/auth/cloud-platform",
             "aud":"https://oauth2.googleapis.com/token",
             "iat": now,
